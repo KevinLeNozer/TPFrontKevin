@@ -210,9 +210,13 @@ nav {
 
 .text-left h2, .text-right h2 {
     margin-bottom: 1rem;
-    font-size: 2.6rem;
+    font-size: 3rem;
     color: #fff;
     font-family: "Chronicle Display Semibold";
+}
+
+.text-bloc {
+    font-size: 1.5rem;
 }
 
 .arrow-read {
@@ -256,8 +260,8 @@ figure img {
     font-weight: bold;
     color: #fff;
     opacity: 0.1;
-    bottom: 59%;
-    right: 75%;
+    bottom: 72%;
+    right: 80%;
     z-index: 2;
 }
 
@@ -348,14 +352,19 @@ figure img {
     }
 
     .text-right, .text-left {
-        max-width: 300px;
+        max-width: 340px;
         padding-top: 7%;
+        margin: 22%;
+    }
+
+    .text-bloc {
+        font-size: 1rem;
     }
 
     .number, .number2 {
-        font-size: 7rem;
-        bottom: 70%;
-        right: 78%
+        font-size: 8rem;
+        bottom: 85%;
+        right: 78%;
     }
 
     .fixed-info-scroll {
