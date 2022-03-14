@@ -394,7 +394,7 @@ figure img {
     .nav-menu {
         position: absolute;
         left: -120%;
-        top: 10%;
+        top: 11%;
         flex-direction: column;
         width: 100%;
         text-align: center;
