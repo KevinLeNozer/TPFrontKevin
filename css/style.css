@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Chronicle Display Semibold";
-    src: url("/fonts/Chronicle\ Display\ Semibold.otf");
+    src: url("../fonts/Chronicle\ Display\ Semibold.otf");
 }
 
 @font-face {
     font-family: "Gilroy-ExtraBold";
-    src: url("/fonts/Gilroy-ExtraBold.otf");
+    src: url("../fonts/Gilroy-ExtraBold.otf");
 }
 
 *{
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    background-image: url("/images/background.jpg");
+    background-image: ("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
