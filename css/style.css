@@ -345,6 +345,10 @@ figure img {
         margin: 0 auto;
     }
 
+    .text-left-img-right {
+        margin-top: 5rem;
+    }
+
     .container, .container-reverse{
         flex-direction: column-reverse;
         align-items: center;
@@ -364,7 +368,7 @@ figure img {
     .number, .number2 {
         font-size: 8rem;
         bottom: 85%;
-        right: 78%;
+        right: 43%;
     }
 
     .fixed-info-scroll {
