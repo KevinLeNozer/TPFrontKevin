@@ -24,6 +24,7 @@ body {
     background-size: cover;
     height: 100vh;
     background-color: #0b1d26;
+    overflow-x: hidden;
 }
 
 header {
@@ -31,8 +32,22 @@ header {
 }
 
 main {
-    margin-top: 35rem;
+    margin-top: 30%;
 }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.burger {
+    display: none;
+}
+
 
 nav {
     display: flex;
@@ -73,7 +88,7 @@ nav {
     display: flex;
     justify-content: space-between;
     margin-top: 8rem;
-    padding: 3rem;
+    padding: 3%;
     position: relative;
 }
 
@@ -101,6 +116,7 @@ nav {
 }
 
 .principal-title:nth-child(2) {
+    font-family: "Gilroy-ExtraBold";
     color: #FBD784;
 }
 
@@ -142,24 +158,12 @@ nav {
     margin-bottom: 10rem;
 }
 
-.number {
-    position: absolute;
-    font-family: "Gilroy-ExtraBold";
-    font-size: 10rem;
-    font-weight: bold;
-    color: #fff;
-    opacity: 0.2;
-    right: 82%;
-    bottom: 60%;
-    letter-spacing: 2px;
-}
-
 .text-left {
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5rem;
+    margin: 7%;
     width: 500px;
     position: relative;
     font-family: "Gilroy-ExtraBold";
@@ -170,7 +174,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 7rem;
+    margin: 5%;
     position: relative;
     width: 500px;
     font-family: "Gilroy-ExtraBold";
@@ -182,6 +186,7 @@ nav {
     font-family: "Gilroy-ExtraBold";
     font-size: 1rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .pseudo-element1:before {
@@ -190,7 +195,7 @@ nav {
     width: 55px;
     height: 2px;
     left: 0;
-    bottom: 88%;
+    bottom: 96.5%;
     background-color: #FBD784;
 }
 
@@ -200,7 +205,7 @@ nav {
     width: 55px;
     height: 2px;
     left: 0;
-    bottom: 85%;
+    bottom: 96%;
     background-color: #FBD784;
 }
 
@@ -210,7 +215,7 @@ nav {
     width: 55px;
     height: 2px;
     left: 0;
-    bottom: 93%;
+    bottom: 89%;
     background-color: #FBD784;
 }
 
@@ -226,6 +231,7 @@ nav {
     text-decoration: none;
     color: #FBD784;
     margin-top: 1rem;
+    width: 120px;
 }
 
 .arrow-read i {
@@ -251,13 +257,27 @@ figure img {
     margin-bottom: 10rem;
 }
 
+
+.number {
+    position: absolute;
+    font-family: "Gilroy-ExtraBold";
+    font-size: 10rem;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0.1;
+    bottom: 63%;
+    right: 84%;
+    letter-spacing: 2px;
+}
+
+
 .number2 {
     position: absolute;
     font-family: "Gilroy-ExtraBold";
     font-size: 10rem;
     font-weight: bold;
     color: #fff;
-    opacity: 0.2;
+    opacity: 0.1;
     bottom: 63%;
     right: 84%;
     letter-spacing: 2px;
@@ -303,4 +323,109 @@ figure img {
 .three-columns-footer div h3 {
     color: #FBD784;
     margin-bottom: 0.5rem;
+}
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.container-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width:767px ){
+    main {
+        margin-top: 0;
+        margin: 0 auto;
+    }
+
+    .container, .container-reverse{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .text-right, .text-left {
+        max-width: 300px;
+        padding-top: 7%;
+    }
+
+    .number, .number2 {
+        font-size: 7rem;
+        bottom: 64%;
+        right: 78%
+    }
+
+    .fixed-info-scroll {
+        display: none;
+    }
+
+    .principal-title {
+        padding-left: 5%;
+    }
+
+    .principal-title h1 {
+        font-size: 2rem;
+    }
+
+    .three-columns-footer {
+        width: 100%;
+    }
+
+    .pseudo-element1:before, .pseudo-element2:before, .pseudo-element:before {
+        bottom: 88%;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    figure img {
+        max-width: 300px;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    .nav-menu {
+        position: absolute;
+        left: -120%;
+        top: 10%;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.6s;
+        padding: 0;
+        background-color: #0b1d2670;
+    }
+
+    .nav-menu .nav-item {
+        padding: 0.7rem;
+    }
+
+    .burger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
 }
